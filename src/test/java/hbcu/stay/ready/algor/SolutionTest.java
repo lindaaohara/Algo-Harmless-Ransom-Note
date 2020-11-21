@@ -18,15 +18,15 @@ public class SolutionTest {
 
     @Test
     public void harmlessRansomNoteTestFail(){
-        String noteText = "this is a secret note for you from a secret admirer";
-        Boolean actual = solution.harmlessRansomNote(noteText, magazineText);
+        String ransomNoteText = "this is a secret note for you from a secret admirer";
+        Boolean actual = solution.canConstruct(ransomNoteText, magazineText);
         Assert.assertFalse(actual);
     }
 
     @Test
     public void harmlessRansomNoteTestPass(){
-        String noteText = "this is a note for you from a secret admirer";
-        Boolean actual = solution.harmlessRansomNote(noteText, magazineText);
+        String ransomNoteText = "this is a note for you from a secret admirer";
+        Boolean actual = solution.canConstruct(ransomNoteText, magazineText);
         Assert.assertTrue(actual);
     }
 }
